@@ -1,6 +1,6 @@
 <?php 
 session_start();
- ?>
+?>
 
 <!DOCTYPE html>
 <html>
@@ -26,12 +26,13 @@ session_start();
   <link rel="stylesheet" href="views/bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="views/dist/css/adminlte.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-   folder instead of downloading all of them to reduce the load. -->
-   <link rel="stylesheet" href="views/dist/css/skins/_all-skins.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="views/dist/css/skins/_all-skins.min.css">
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-   <!-- Google Font -->
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="views/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
 
   <!--==============================
   =            PLUGINS JS           =
@@ -48,6 +49,10 @@ session_start();
   <!-- AdminLTE App -->
   <script src="views/dist/js/adminlte.min.js"></script>
 
+  <!-- DataTables -->
+  <script src="views/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="views/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
 </head>
 
 <!--=====================================
@@ -61,7 +66,7 @@ session_start();
 
   if(isset($_SESSION['login']) && $_SESSION['login'] =="ok"){
 
-  echo '<div class="wrapper">';
+    echo '<div class="wrapper">';
 
     /*============================
     =            Head            =
